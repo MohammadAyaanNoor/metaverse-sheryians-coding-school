@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#main #loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+
+    animation-name: loader;
+    animation-duration: 2s;
+    animation-delay: 3s;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    animation-fill-mode: forwards;
+
+}
+#main #loader img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+#main #upper{
+    position: absolute;
+    top: 0;
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    background-color: black;
+
+}
+
+#layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    background-color: rgba(0, 0, 0, 0.392);
+}
+#main #upper #layer #nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+#main #upper #layer #nav h2{
+    color: wheat;
+    font-size: 20px;
+    font-family: orbitron;
+    letter-spacing: 4px;
+   
+}
+#main #upper #layer #nav #link{
+    display: flex;
+    gap: 40px;
+}
+#main #upper #layer #nav #link button{
+    width: 100px;
+    height: 35px;
+    font-size: 17px;
+    border-radius: 15px;
+    border: none;
+    color: wheat;
+    font-family: orbitron;
+    font-weight: 400;
+    background-color: transparent;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#main #upper #layer #nav #link button:hover{
+    background-color: wheat;
+    color: black;
+}
+#main #upper #layer #nav button{
+    width: 130px;
+    height: 35px;
+    font-size: 17px;
+    border-radius: 15px;
+    border: none;
+    color: wheat;
+    font-family: orbitron;
+    font-weight: 400;
+    background-color: transparent;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#main #upper #layer #nav button:hover{
+    cursor: pointer;
+    background-color: wheat;
+    color: black;
+}
+#main  #upper #layer #glass{
+    position: relative;
+    top: 22%;
+    left: 0%;
+    height: 300px;
+    padding-left: 30px;
+
+
+
+
+    width: 100%;
+}
+#main  #upper #layer #glass h1{
+    position: absolute;
+    font-size: 60px;
+    font-family: anton;
+    color: wheat;
+
+
+}
+#main  #upper #layer #glass span{
+    font-family: Palette Mosaic;
+}
+#main #vid{
+    position: relative;
+    top: 50%;
+    width: 100%;
+    height: 50%;
+    left: 0;
+
+
+}
+#main #vid video{
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+}
+#main #upper #layer #glass #text{
+    position: absolute;
+    top: 50%;
+    width: 700px;
+    height: 300px;
+    left: 70%;
+
+    border-radius: 50px;
+    transform: translate(-50%,-50%);
+    background-color: wheat;
+
+}
+#main #upper #layer #glass #text img{
+    height: 80%;
+    width: 20%;
+
+    position: absolute;
+    left: 79%;
+    top: 42%;
+    transform: translate(-50%,-50%) scale(2);
+}
+#main #upper #layer #glass #text p{
+    position: absolute;
+    left: 7%;
+    top: 13%;
+    font-size: 24px;
+    font-family: poppins;
+    font-weight: 500;
+
+}
+#main #upper #layer #glass #text button{
+    position: relative;
+    left: 7%;
+    top: 60%;
+    width: 30%;
+    height: 50px;
+    border-radius: 50px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 2;
+    color: black;
+    font-size: 18px;
+    font-family: orbitron;
+    justify-content: center;
+    border: 3px solid black;
+    
+
+}
+#main #upper #layer #glass #text button #black{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    z-index: -1;
+    background-color: black;
+    transition: left cubic-bezier(0.19, 1, 0.22, 1) 1.3s;
+}
+#main #upper #layer #glass #text button:hover #black{
+    position: absolute;
+    left: 0;
+    
+
+}
+#main #upper #layer #glass #text button:hover{
+    color: wheat;
+    cursor: pointer;
+}
+@keyframes loader {
+    from{
+        opacity: 1;
+        transform: scale(1);
+        z-index: 2;
+    }
+    to{
+        opacity: 0;
+        transform: scale(2);
+        z-index: 0;
+    }
+    
+}
